@@ -1,0 +1,24 @@
+{
+  "name": "jst-templates-brunch",
+  "version": "0.0.1",
+  "description": "Wrap templates to JST function for Brunch",
+  "author": {
+    "name": "Jarvis Ao Ieong",
+    "email": "kinua1230@gmail.com"
+  },
+  "homepage": "https://github.com/jarvisaoieong/jst-templates-brunch",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jarvisaoieong/jst-templates-brunch.git"
+  },
+  "main": "lib/index",
+  "engines": {
+    "node": ">=0.8"
+  },
+  "scripts": {
+    "postinstall": "coffee -c -o lib src"
+  },
+  "dependencies": {
+    "coffee-script": "~1.7.1"
+  }
+}
