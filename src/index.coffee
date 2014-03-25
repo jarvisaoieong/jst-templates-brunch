@@ -3,12 +3,13 @@ module.exports = class JstTemplatesCompiler
   brunchPlugin: yes
   type: 'template'
   extension: 'js'
-  pattern: /\.(html|jade|eco|hbs|handlebars)$/
+  # pattern: /\.(html|jade|eco|hbs|handlebars)$/
 
   constructor: (config) ->
     @namespace = config.plugins?.jstTemplates?.namespace or 'JST'
     @basePath = config.plugins?.jstTemplates?.basePath or 'app'
     @keepExt = config.plugins?.jstTemplates?.keepExt
+    @pattern = config.plugins?.jstTemplates?.pattern or /\.(html|jade|eco|hbs|handlebars)$/
 
   compile: (data, path, callback) ->
     if @basePath
@@ -28,7 +29,9 @@ module.exports = class JstTemplatesCompiler
         var define, module = { exports: true };
 
         // Include the data from preprocessor
-        window['#{@namespace}']['#{path}'] = #{data}
+        #{data};
+
+        window['#{@namespace}']['#{path}'] = module.exports;
 
       })();
     """
