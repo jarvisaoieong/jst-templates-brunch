@@ -1,6 +1,6 @@
 {
   "name": "jst-templates-brunch",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Wrap templates to JST function for Brunch",
   "author": {
     "name": "Jarvis Ao Ieong",

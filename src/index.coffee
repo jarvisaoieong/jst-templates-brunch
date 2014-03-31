@@ -3,7 +3,6 @@ module.exports = class JstTemplatesCompiler
   brunchPlugin: yes
   type: 'template'
   extension: 'js'
-  # pattern: /\.(html|jade|eco|hbs|handlebars)$/
 
   constructor: (config) ->
     @namespace = config.plugins?.jstTemplates?.namespace or 'JST'
