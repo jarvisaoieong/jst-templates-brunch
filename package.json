@@ -1,6 +1,6 @@
 {
   "name": "jst-templates-brunch",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Wrap templates to JST function for Brunch",
   "author": {
     "name": "Jarvis Ao Ieong",
@@ -16,7 +16,7 @@
     "node": ">=0.8"
   },
   "scripts": {
-    "postinstall": "coffee -c -o lib src"
+    "postinstall": "node_modules/.bin/coffee -c -o lib src"
   },
   "dependencies": {
     "coffee-script": "~1.7.1"
